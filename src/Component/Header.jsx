@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../public/Icons/Logo.svg";
 import Hamburger from "../../public/Icons/hamburger-menu.svg";
@@ -12,6 +12,7 @@ function Header() {
   const hideNavBar = () => {
     setIsNavBarVisible(false);
   };
+  const [activeLink, setActiveLink] = useState("");
   return (
     <div className="h-40 w-full">
       <div className="hidden xl:block h-[35%] w-full bg-[#15313F]">
@@ -31,15 +32,24 @@ function Header() {
             onClick={showNavBar}
           />
           {isNavBarVisible && (
-            <div className="absolute z-10 right-0 top-0 w-[70%] h-[%] sm:w-[40%] md:w-[40%] bg-gray-100 xl:hidden rounded">
-              <p className="text-right p-4 text-3xl hover:cursor-pointer" onClick={hideNavBar}>X</p>
+            <div className="absolute z-30 right-0 top-0 w-[70%] h-[%] sm:w-[40%] md:w-[40%] bg-gray-100 xl:hidden rounded">
+              <p
+                className="text-right p-4 text-3xl hover:cursor-pointer"
+                onClick={hideNavBar}
+              >
+                X
+              </p>
               <ul className="w-full flex flex-col flex-row-reverse justify-center gap-8">
                 <Link to="/" className="hover:cursor-pointer">
-                  <li className="text-2xl  h-10 text-right w-full bg-gray  border-l-2 border-[#FFA300] px-4">الرئيسية</li>
+                  <li className="text-2xl  h-10 text-right w-full bg-gray  border-l-2 border-[#FFA300] px-4">
+                    الرئيسية
+                  </li>
                 </Link>
 
                 <Link to="/AboutUs" className="hover:cursor-pointer">
-                  <li className="text-2xl  h-10 text-right w-full bg-gray  border-l-2 border-[#FFA300] px-4">من نحن</li>
+                  <li className="text-2xl  h-10 text-right w-full bg-gray  border-l-2 border-[#FFA300] px-4">
+                    من نحن
+                  </li>
                 </Link>
 
                 <Link to="/Courses" className="hover:cursor-pointer">
@@ -49,15 +59,21 @@ function Header() {
                 </Link>
 
                 <Link to="/Workshop" className="hover:cursor-pointer">
-                  <li className="text-2xl  h-10 text-right w-full bg-gray  border-l-2 border-[#FFA300] px-4">الورش</li>
+                  <li className="text-2xl  h-10 text-right w-full bg-gray  border-l-2 border-[#FFA300] px-4">
+                    الورش
+                  </li>
                 </Link>
 
                 <Link to="/News" className="hover:cursor-pointer">
-                  <li className="text-2xl  h-10 text-right w-full bg-gray  border-l-2 border-[#FFA300] px-4">الأخبار</li>
+                  <li className="text-2xl  h-10 text-right w-full bg-gray  border-l-2 border-[#FFA300] px-4">
+                    الأخبار
+                  </li>
                 </Link>
 
                 <Link to="/ContactUs" className="hover:cursor-pointer">
-                  <li className="text-2xl  h-10 text-right w-full bg-gray  border-l-2 border-[#FFA300] px-4">تواصل معنا</li>
+                  <li className="text-2xl  h-10 text-right w-full bg-gray  border-l-2 border-[#FFA300] px-4">
+                    تواصل معنا
+                  </li>
                 </Link>
               </ul>
             </div>
@@ -74,31 +90,89 @@ function Header() {
         </div>
         <div className="hidden xl:flex h-full w-[60%] flex items-center ">
           <ul className="w-full flex flex-row-reverse justify-center gap-8">
-            <Link to="/" className="hover:cursor-pointer">
-              <li className="border-l-2 border-[#FFA300] px-4">الرئيسية</li>
-            </Link>
+          <li
+  className={`border-l-2 border-[#FFA300] px-4 ${
+    activeLink === "home" ? "font-bold" : ""
+  }`}
+>
+  <Link
+    to="/"
+    className="hover:cursor-pointer"
+    onClick={() => setActiveLink("home")}
+  >
+    الرئيسية
+  </Link>
+</li>
 
-            <Link to="/AboutUs" className="hover:cursor-pointer">
-              <li className="border-l-2 border-[#FFA300] px-4">من نحن</li>
-            </Link>
+<li
+  className={`border-l-2 border-[#FFA300] px-4 ${
+    activeLink === "about" ? "font-bold" : ""
+  }`}
+>
+  <Link
+    to="/AboutUs"
+    className="hover:cursor-pointer"
+    onClick={() => setActiveLink("about")}
+  >
+    من نحن
+  </Link>
+</li>
 
-            <Link to="/Courses" className="hover:cursor-pointer">
-              <li className="border-l-2 border-[#FFA300] px-4">
-                الدورات التدريبية
-              </li>
-            </Link>
+<li
+  className={`border-l-2 border-[#FFA300] px-4 ${
+    activeLink === "courses" ? "font-bold" : ""
+  }`}
+>
+  <Link
+    to="/Courses"
+    className="hover:cursor-pointer"
+    onClick={() => setActiveLink("courses")}
+  >
+    الدورات التدريبية
+  </Link>
+</li>
 
-            <Link to="/Workshop" className="hover:cursor-pointer">
-              <li className="border-l-2 border-[#FFA300] px-4">الورش</li>
-            </Link>
+<li
+  className={`border-l-2 border-[#FFA300] px-4 ${
+    activeLink === "workshop" ? "font-bold" : ""
+  }`}
+>
+  <Link
+    to="/Workshop"
+    className="hover:cursor-pointer"
+    onClick={() => setActiveLink("workshop")}
+  >
+    الورش
+  </Link>
+</li>
 
-            <Link to="/News" className="hover:cursor-pointer">
-              <li className="border-l-2 border-[#FFA300] px-4">الأخبار</li>
-            </Link>
+<li
+  className={`border-l-2 border-[#FFA300] px-4 ${
+    activeLink === "news" ? "font-bold" : ""
+  }`}
+>
+  <Link
+    to="/News"
+    className="hover:cursor-pointer"
+    onClick={() => setActiveLink("news")}
+  >
+    الأخبار
+  </Link>
+</li>
 
-            <Link to="/ContactUs" className="hover:cursor-pointer">
-              <li className="border-l-2 border-transparent">تواصل معنا</li>
-            </Link>
+<li
+  className={`border-l-2 border-transparent`}
+>
+  <Link
+    to="/ContactUs"
+    className={`hover:cursor-pointer ${
+      activeLink === "contact" ? "font-bold" : ""
+    }`}
+    onClick={() => setActiveLink("contact")}
+  >
+    تواصل معنا
+  </Link>
+</li>
           </ul>
         </div>
         <div className="hidden xl:flex h-full w-[15%] flex flex-row-reverse items-center justify-start gap-8">
@@ -113,3 +187,8 @@ function Header() {
 }
 
 export default Header;
+
+<div className="hidden xl:flex h-full w-[15%] flex flex-row-reverse items-center justify-start gap-8">
+  <button className="bg-[#15313F] text-white p-2 rounded">تسجيل الدخول</button>
+  <button>التسجيل</button>
+</div>;
