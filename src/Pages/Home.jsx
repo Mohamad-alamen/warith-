@@ -1,6 +1,10 @@
 import Header from "../Component/Header.jsx";
 import CourseCard from "../Component/CoursesCard.jsx";
+import yellowLine from "../../public/Icons/yellowLine.svg";
+import yellowArrow from "../../public/Icons/yellowArrow.svg";
 import WorkshopCard from "../Component/WorkshopCard.jsx";
+import InstructorCard from "../Component/InstructorCard.jsx";
+import NewsCard from "../Component/NewsCard.jsx";
 import {
   IconDeviceLaptop,
   IconBinaryTree,
@@ -21,7 +25,13 @@ import { Navigation } from "swiper/modules";
 
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState("");
- 
+  const [clickedCardImageSrc, setClickedCardImageSrc] = useState("");
+  const [clickedCardTitle, setClickedCardTitle] = useState("");
+  const handleCardClick = (imageSrc, title) => {
+    setClickedCardImageSrc(imageSrc);
+    setClickedCardTitle(title);
+  };
+
   return (
     <div>
       <div className="h-screen relative">
@@ -102,7 +112,7 @@ function Home() {
                 الدورات التدريبية
               </p>
             </div>
-            <div className="h-[40%] flex justify-end px-2">
+            <div className="h-[40%] w-[87%] flex justify-end px-2">
               <ul className="hidden lg:flex flex-row-reverse gap-12">
                 <li
                   className={`hover:cursor-pointer text-lg ${
@@ -196,12 +206,36 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen mt-80 flex flex-col lg:flex-row overflow-hidden">
+      <div className="h-screen mt-80 flex flex-col lg:flex-row overflow-hidden relative">
+        <div
+          style={{
+            backgroundImage: `url(${yellowArrow})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            top: "8.5rem",
+            left: "16rem",
+          }}
+          className="w-80 h-20 absolute  opacity-0 xl:opacity-100"
+        ></div>
+        <div
+          style={{
+            backgroundImage: `url(${yellowLine})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            top: "25rem",
+            left: "14rem",
+            height: "14rem",
+            width: "12rem",
+          }}
+          className=" absolute opacity-0 xl:opacity-100"
+        ></div>
         <div className="h-full w-[100%] flex flex-col justify-around  lg:w-[50%] ">
           <div className="h-[30%] flex  flex-col items-end justify-center gap-8 pr-2">
-            <p className="text-[#213469] text-sm  lg:text-lg font-bold hover:cursor-pointer">سجل الان</p>
+            <p className="text-[#213469] text-sm  lg:text-lg font-bold hover:cursor-pointer">
+              سجل الان
+            </p>
             <p className="text-[#15313F] text- flex  flex-row-reverse gap-2 lg:text-4xl font-bold">
-              انضم الى مجتمع <p>Warith Elevate</p>{" "}
+              انضم الى مجتمع <p>Warith Elevate</p>
             </p>
             <p className="text-[#737373] text-right text-sm lg:text-lg">
               انضم الينا في رحلة الاكتشاف والتعلم والابتكار، كن جزءا من مجتمع
@@ -217,20 +251,26 @@ function Home() {
               </div>
             </div>
             <div className="h-[33%] flex justify-end items-center gap-14 p-2">
-            <p className="font-bold text-lg"> شبكات التواصل الفعال</p>
+              <p className="font-bold text-lg"> شبكات التواصل الفعال</p>
               <div className="bg-[#5FAEC4] rounded-full p-2">
                 <IconBinaryTree className="h-10 w-10 text-white" />
               </div>
             </div>
             <div className="h-[33%] flex justify-end items-center gap-14 p-2">
-            <p className="font-bold text-lg"> ورش العمل والدورات التدريبية </p>
+              <p className="font-bold text-lg">
+                {" "}
+                ورش العمل والدورات التدريبية{" "}
+              </p>
               <div className="bg-[#5FAEC4] rounded-full p-2">
                 <IconDeviceLaptop className="h-10 w-10 text-white font-normal" />
               </div>
             </div>
           </div>
           <div className="h-[15%] flex items-center justify-end p-2">
-            <button className="border px-12 py-4 text-lg font-semibold  border-2 border-black rounded "> Warith Elevate انضم الان الى</button>
+            <button className="border px-12 py-4 text-lg font-semibold  border-2 border-black rounded ">
+              {" "}
+              Warith Elevate انضم الان الى
+            </button>
           </div>
         </div>
         <div className="h-full w-[100%] lg:w-[50%] flex items-center justify-end relative">
@@ -238,8 +278,8 @@ function Home() {
           <img
             style={{
               transform: "rotate(-20deg)",
-              right: '7rem',
-              bottom: '6rem'
+              right: "7rem",
+              bottom: "6rem",
             }}
             className="h-[60%] w-[60%] lg:h-[70%] lg:w-[70%] rounded-2xl absolute object-cover"
             src="https://www.enrgtech.co.uk/blog/wp-content/uploads/2023/07/woman-working-her-workshop-creative-invention-jpg.webp"
@@ -247,15 +287,15 @@ function Home() {
           />
         </div>
       </div>
-      <div className="h-screen flex justify-center items-center mt-20">
+      <div className="h-screen flex justify-center items-center">
         <div className="h-full w-[95%] ">
           <div className="w-full h-[12%] flex flex-col gap-10">
             <div className="h-[60%] flex items-center justify-center">
               <p className="text-[#15313F] text-3xl font-semibold">
-                الورش التدريبية
+                الدورات التدريبية
               </p>
             </div>
-            <div className="h-[40%] flex justify-end px-2">
+            <div className="h-[40%] w-[83%] flex justify-end px-2">
               <ul className="hidden lg:flex flex-row-reverse gap-12">
                 <li
                   className={`hover:cursor-pointer text-lg ${
@@ -318,30 +358,147 @@ function Home() {
               </ul>
             </div>
           </div>
-          <div className="h-full">
-            <div className="h-[50%] mt-10 flex justify-evenly">
-              <div className="lg:flex">
-                <CourseCard />
+          <div
+            style={{
+              gap: "5rem",
+            }}
+            className="h-full flex flex-col"
+          >
+            <div className="h-[50%] mt-10 flex justify-center gap-14">
+              <div className="hidden lg:flex">
+                <WorkshopCard />
               </div>
-              <div className="hidden lg:flex md:flex">
-                <CourseCard />
+              <div>
+                <WorkshopCard />
               </div>
-
             </div>
-            <div className="h-[50%] mt-10 flex justify-evenly">
-              <div className="hidden md:flex lg:flex">
-                <CourseCard />
+            <div className="h-[50%] mt-10 flex justify-center gap-14">
+              <div className="hidden lg:flex">
+                <WorkshopCard />
               </div>
-              <div className="lg:fle md:flex">
-                <CourseCard />
+              <div>
+                <WorkshopCard />
               </div>
-
             </div>
-            <div className="w-full h-[10%] lg:mt-10 flex justify-center items-center">
+            <div className="w-full h-[10%] mt-12 lg:mt-10 flex justify-center items-center">
               <button className="border px-4 py-4 text-lg font-semibold  border-2 border-black rounded">
                 عرض الكورسات
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="h-screen mt-80 flex items-center ">
+        <div className="w-full h-80 bg-white">
+          <div className="h-[30%] w-full flex justify-center items-center">
+            <p className="text-[#15313F] text-xl md:text-3xl font-semibold">
+              Warith Elevate تعرف على مدربين
+            </p>
+          </div>
+          <div className="h-[70%] w-full bg-white flex justify-around items-center">
+            <div className="hidden lg:flex">
+              <InstructorCard />
+            </div>
+            <div className="hidden md:flex ">
+              <InstructorCard />
+            </div>
+            <div>
+              <InstructorCard />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="h-screen flex flex-col gap-4">
+        <div className="h-10 flex justify-center items-center">
+          <p className="font-semibold text-[#15313F] text-3xl">
+            Warith Elevate اخبار
+          </p>
+        </div>
+        <div className="h-[90%] flex">
+          <div className="h-full w-[100%] flex flex-col justify-evenly lg:w-[50%] pl-10">
+            <NewsCard
+              imageSrc="https://a.storyblok.com/f/159374/1280x853/571a1bca9b/a-group-of-people-having-a-meeting-in-the-office.jpg"
+              title="خطوات عملية لتأهيل وتدريب وتوظيف طلبة وخريجي جامعة وارث الانبياء(عليه السلام"
+              onClick={handleCardClick}
+            />
+
+            <NewsCard
+              imageSrc="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241213.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1697587200&semt=ais"
+              title="خطوات عملية لتأهيل وتدريب وتوظيف طلبة وخريجي جامعة وارث الانبياء(عليه السلام"
+              onClick={handleCardClick}
+            />
+            <NewsCard
+              imageSrc="https://images.pexels.com/photos/3182781/pexels-photo-3182781.jpeg?cs=srgb&dl=pexels-fauxels-3182781.jpg&fm=jpg"
+              title="خطوات عملية لتأهيل وتدريب وتوظيف طلبة وخريجي جامعة وارث الانبياء عليه السلام"
+              onClick={handleCardClick}
+            />
+          </div>
+          <div className="h-full w-[50%] hidden xl:flex flex justify-center items-center">
+            {clickedCardImageSrc ? (
+              <img
+                className="h-full w-[90%] object-cover"
+                src={clickedCardImageSrc}
+                alt=""
+              />
+            ) : (
+              <img
+                className="h-full w-[90%] object-cover"
+                src="https://a.storyblok.com/f/159374/1280x853/571a1bca9b/a-group-of-people-having-a-meeting-in-the-office.jpg"
+                alt=""
+              />
+            )}
+
+            <div className="h-[80%] w-[45%]  bg-[#15313F] opacity-70 absolute"></div>
+            <div
+              style={{
+                height: "25rem",
+                width: "44%",
+              }}
+              className="absolute z-20 flex items-center"
+            >
+              <p className="text-white text-4xl text-center font-bold">
+                {clickedCardTitle}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="h-10  mt-12 lg:mt-10 flex justify-center items-center">
+          <button className="border px-4 py-4 text-lg font-semibold  border-2 border-black rounded">
+            عرض جميع الاخبار
+          </button>
+        </div>
+      </div>
+      <div className="h-screen mt-90 flex  items-center ">
+        <div
+          className="flex flex-col gap-12"
+          style={{
+            height: "60%",
+            width: "100%",
+          }}
+        >
+          <div className="h-[12%] w-full flex items-center justify-center ">
+            <p className="text-3xl font-semibold text-[#15313F] ">استكشف</p>
+          </div>
+          <div className="h-[76%] flex justify-center">
+            <div className="h-full w-[60%] items-center  flex justify-between">
+              <iframe
+                className="h-full w-[100%] lg:w-[40%]"
+                src="https://www.youtube.com/embed/glZLYYllXvM"
+                title="YouTube Video"
+                allowFullScreen
+              />
+              <iframe
+                className="h-full w-[40%] bg-green-400 hidden lg:flex"
+                src="https://www.youtube.com/embed/QthLlDFwVSE"
+                title="YouTube Video"
+                allowFullScreen
+              />
+            </div>
+          </div>
+          <div className="h-[12%] w-full flex items-center justify-center">
+            <button className="border px-4 py-4 text-lg font-semibold  border-2 border-black rounded">
+              عرض مكتبة الفيديوهات
+            </button>
           </div>
         </div>
       </div>

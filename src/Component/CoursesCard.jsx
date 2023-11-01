@@ -5,13 +5,13 @@ function CourseCard() {
     <div>
       <div
         style={{
-          borderRadius: "16px 16px 0 0 ",
+            borderRadius: '16px 16px 0 0 '
         }}
         className="h-80 bg-black w-80"
       >
         <img
           style={{
-            borderRadius: "16px 16px 0 0 ",
+            borderRadius: '16px 16px 0 0 '
           }}
           src="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
           alt=""
@@ -19,12 +19,12 @@ function CourseCard() {
         />
         <div
           style={{
-            borderRadius: " 0 0 16px 16px",
+            borderRadius: ' 0 0 16px 16px'
           }}
           className="h-[60%] bg-white flex flex-col items-center"
         >
           <div className="h-[20%] w-[95%] flex justify-between items-center">
-            <div className="w-[16%] flex justify-between items-center  rounded-lg">
+            <div className="w-[16%] flex justify-between items-center ">
               <IconStar
                 style={{
                   color: "#FFA300",
@@ -43,25 +43,11 @@ function CourseCard() {
             </div>
             <div className="h-[40%] flex justify-end">
               <div className="w-[40%] h-full flex justify-around items-center">
-                <p
-                  style={{
-                    fontSize: "14px",
-                  }}
-                  className="font-bold text-[#15313F]"
-                >
-                  14 - 07 - 2023
-                </p>
+                <p className="font-bold text-[#15313F]">14 - 07 - 2023</p>
                 <IconCalendar />
               </div>
               <div className="w-[40%] h-full flex items-center justify-around">
-                <p
-                  style={{
-                    fontSize: "14px",
-                  }}
-                  className="font-bold text-[#15313F]"
-                >
-                  22hr 30min
-                </p>
+                <p className="font-bold text-[#15313F]">22hr 30min</p>
                 <IconClock />
               </div>
             </div>
