@@ -30,6 +30,8 @@ function Home() {
   const handleCardClick = (imageSrc, title) => {
     setClickedCardImageSrc(imageSrc);
     setClickedCardTitle(title);
+    const [selectedCategory, setSelectedCategory] = useState("");
+    const [selectedCardCategory, setSelectedCardCategory] = useState
   };
 
   return (
@@ -69,7 +71,7 @@ function Home() {
               />
             </SwiperSlide>
           </Swiper>
-          <div className="h-[100%] w-[40%] absolute top-20 right-20 z-20  lg:flex lg:flex-col lg:items-end  ">
+          <div className="h-[100%] w-[70%] md:w-[40%] absolute top-20 right-20 z-20  lg:flex lg:flex-col lg:items-end  ">
             <div className="h-[40%] flex justify-end items-center lg:w-[65%] lg:justify-end">
               <img src={Logo} alt="" className="h-[60%] w-[40%]" />
               <img src={Logo2} alt="" className="h-[60%] w-[40%]" />
@@ -178,24 +180,66 @@ function Home() {
           <div className="h-full flex flex-col gap-14">
             <div className="h-[50%] mt-10 flex justify-center gap-14">
               <div className="hidden lg:flex">
-                <CourseCard />
+                <CourseCard
+                  imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                  rating="4.9"
+                  category="التصميم"
+                  title="كورس تصميم الهوية البصرية"
+                  date="14 - 07 - 2023"
+                  duration="22hr 30min"
+                />
               </div>
               <div className="hidden lg:flex md:flex">
-                <CourseCard />
+                <CourseCard
+                  imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                  rating="4.9"
+                  category="التصميم"
+                  title="كورس بوستات السوشل ميديا"
+                  date="14 - 07 - 2023"
+                  duration="22hr 30min"
+                />
               </div>
               <div>
-                <CourseCard />
+                <CourseCard
+                  imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                  rating="4.9"
+                  category="التصميم"
+                  title="كورس تصميم الهوية البصرية"
+                  date="14 - 07 - 2023"
+                  duration="22hr 30min"
+                />{" "}
               </div>
             </div>
             <div className="h-[50%] mt-10 flex justify-center gap-14">
               <div className="hidden lg:flex">
-                <CourseCard />
+                <CourseCard
+                  imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                  rating="4.9"
+                  category="التصميم"
+                  title="كورس التصميم الداخلي"
+                  date="14 - 07 - 2023"
+                  duration="22hr 30min"
+                />{" "}
               </div>
               <div className="hidden lg:fle md:flex">
-                <CourseCard />
+                <CourseCard
+                  imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                  rating="4.9"
+                  category="البرمجة"
+                  title="كورس   برمجة التطبيقات"
+                  date="14 - 07 - 2023"
+                  duration="22hr 30min"
+                />{" "}
               </div>
               <div>
-                <CourseCard />
+                <CourseCard
+                  imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                  rating="4.9"
+                  category="البرمجة"
+                  title="كورس  برمجة واجهات المواقع"
+                  date="14 - 07 - 2023"
+                  duration="22hr 30min"
+                />{" "}
               </div>
             </div>
             <div className="w-full h-[10%] mt-8 lg:mt-10 flex justify-center items-center">
@@ -212,22 +256,16 @@ function Home() {
             backgroundImage: `url(${yellowArrow})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
-            top: "8.5rem",
-            left: "16rem",
           }}
-          className="w-80 h-20 absolute  opacity-0 xl:opacity-100"
+          className="w-40 h-20 lg:h-[12rem] lg:w-[14rem] absolute top-[5rem] right-[5rem] lg:left-[18rem] lg:top-[8rem]"
         ></div>
         <div
           style={{
             backgroundImage: `url(${yellowLine})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
-            top: "25rem",
-            left: "14rem",
-            height: "14rem",
-            width: "12rem",
           }}
-          className=" absolute opacity-0 xl:opacity-100"
+          className=" absolute h-[9rem] w-[5rem]  lg:h-[12rem] lg:w-[12rem] top-[18rem] left-[1rem] lg:top-[28rem] lg:left-[18rem]"
         ></div>
         <div className="h-full w-[100%] flex flex-col justify-around  lg:w-[50%] ">
           <div className="h-[30%] flex  flex-col items-end justify-center gap-8 pr-2">
@@ -388,8 +426,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen mt-80 flex items-center ">
-        <div className="w-full h-80 bg-white">
+      <div className="h-screen mt-80 flex items-center justify-center ">
+        <div className="w-full h-80">
           <div className="h-[30%] w-full flex justify-center items-center">
             <p className="text-[#15313F] text-xl md:text-3xl font-semibold">
               Warith Elevate تعرف على مدربين
@@ -399,7 +437,7 @@ function Home() {
             <div className="hidden lg:flex">
               <InstructorCard />
             </div>
-            <div className="hidden md:flex ">
+            <div className="hidden lg:flex">
               <InstructorCard />
             </div>
             <div>
