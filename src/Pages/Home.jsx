@@ -1,5 +1,6 @@
 import Header from "../Component/Header.jsx";
 import CourseCard from "../Component/CoursesCard.jsx";
+import Footer from "../Component/Footer.jsx"
 import yellowLine from "../../public/Icons/yellowLine.svg";
 import yellowArrow from "../../public/Icons/yellowArrow.svg";
 import WorkshopCard from "../Component/WorkshopCard.jsx";
@@ -540,6 +541,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
