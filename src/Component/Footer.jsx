@@ -9,7 +9,7 @@ import {
 function Footer() {
   return (
     <div>
-      <div className="h-[70rem] lg:h-[30rem] bg-[#15313F] flex flex-col lg:flex-row lg:flex-row-reverse lg:justify-between lg:relative items-center justify-between">
+      <div className="h-[70rem] lg:h-[24rem] bg-[#15313F] flex flex-col lg:flex-row lg:flex-row-reverse lg:justify-between lg:relative items-center justify-between">
         <img className="h-[12rem] w-[12rem]" src={Logo2} alt="" />
         <div className="flex flex-col items-center text-center gap-2">
           <p className="text-2xl text-white font-semibold">روابط الموقع</p>

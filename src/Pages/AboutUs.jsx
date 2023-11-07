@@ -19,7 +19,7 @@ import yellowArrow from "../../public/Icons/yellowArrow.svg";
 
 function AboutUs() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header />
       <MainBackground FirstWord="من" SecondWord="نحن" />
       <div className="h-screen flex flex-col gap-2 lg:flex-row lg:flex-row-reverse mt-10">

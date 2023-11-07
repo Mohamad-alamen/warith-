@@ -31,18 +31,16 @@ function Home() {
   const handleCardClick = (imageSrc, title) => {
     setClickedCardImageSrc(imageSrc);
     setClickedCardTitle(title);
-    const [selectedCategory, setSelectedCategory] = useState("");
-    const [selectedCardCategory, setSelectedCardCategory] = useState
   };
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="h-screen relative">
         <Header />
         <div className="h-[70vh] w-full relative">
           <div className="h-[90vh] w-full bg-[#15313F] opacity-40 absolute z-10 pointer-events-none"></div>
           <Swiper
-            className="h-[90vh] relative"
+            className="h-[90vh] relative "
             modules={[Navigation]}
             spaceBetween={10}
             slidesPerView={1}
@@ -326,7 +324,7 @@ function Home() {
           />
         </div>
       </div>
-      <div className="h-screen flex justify-center items-center">
+      <div className="h-screen  flex justify-center items-center">
         <div className="h-full w-[95%] ">
           <div className="w-full h-[12%] flex flex-col gap-10">
             <div className="h-[60%] flex items-center justify-center">
@@ -401,7 +399,7 @@ function Home() {
             style={{
               gap: "5rem",
             }}
-            className="h-full flex flex-col"
+            className="h-full flex flex-col justify-center items-center"
           >
             <div className="h-[50%] mt-10 flex justify-center gap-14">
               <div className="hidden lg:flex">
@@ -434,7 +432,7 @@ function Home() {
               Warith Elevate تعرف على مدربين
             </p>
           </div>
-          <div className="h-[70%] w-full bg-white flex justify-around items-center">
+          <div className="h-[80%] w-[100%] bg-white flex justify-around items-center">
             <div className="hidden lg:flex">
               <InstructorCard />
             </div>
@@ -442,7 +440,7 @@ function Home() {
               <InstructorCard />
             </div>
             <div>
-              <InstructorCard />
+              <InstructorCard/>
             </div>
           </div>
         </div>

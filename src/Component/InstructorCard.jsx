@@ -6,7 +6,7 @@ function InstructorCard() {
       <div
         style={{
           height: "12rem",
-          width: "30rem",
+          width: "28rem",
           boxShadow: "0 2px 9px rgba(0, 0, 0, 0.7)",
           padding: '0.1rem'
         }}
