@@ -7,19 +7,18 @@ function NewsCard({ imageSrc, title, onClick }) {
   const handleCardClick = () => {
     setClicked(true);
     onClick(imageSrc, title);
-    console.log(clicked)
+    console.log(clicked);
   };
 
   return (
     <div onClick={handleCardClick}>
       <div
-        className="flex items-center flex-row-reverse lg:w-[70%]"
+        className="flex items-center  flex-row-reverse w-[100%] lg:w-[70%]"
         style={{
           height: '10rem',
-          width: '80%',
           backgroundColor: 'white',
           boxShadow: '0 2px 9px rgba(0, 0, 0, 0.7)',
-          cursor: 'pointer', // Add cursor pointer to indicate clickability
+          cursor: 'pointer',
         }}
       >
         <img className="h-full w-[40%]" src={imageSrc} alt="" />
@@ -27,7 +26,7 @@ function NewsCard({ imageSrc, title, onClick }) {
           <p className="font-semibold text-sm text-right lg:text-lg">{title}</p>
           <div className="flex items-center gap-1 w-fit hover:cursor-pointer">
             <IconArrowLeftBar />
-            <p className="font-bold text-[#213469]">اقرا المزيد</p>
+            <p className="lg:font-bold  text-[#213469]">اقرا المزيد</p>
           </div>
         </div>
       </div>

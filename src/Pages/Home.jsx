@@ -1,6 +1,6 @@
 import Header from "../Component/Header.jsx";
 import CourseCard from "../Component/CoursesCard.jsx";
-import Footer from "../Component/Footer.jsx"
+import Footer from "../Component/Footer.jsx";
 import yellowLine from "../../public/Icons/yellowLine.svg";
 import yellowArrow from "../../public/Icons/yellowArrow.svg";
 import WorkshopCard from "../Component/WorkshopCard.jsx";
@@ -90,7 +90,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen w-full  flex justify-center items-center">
+      <div className="h-[60vh] lg:h-screen w-full  flex justify-center items-center">
         <div className="w-[80%] h-[40%] bg-white">
           <div className="h-[30%]  flex justify-center items-center">
             <p className="text-[#15313F] font-semibold text-3xl border-b-2 pb-3 border-[#FFA300]">
@@ -105,7 +105,74 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen flex justify-center items-center">
+      <div className="h-screen lg:hidden">
+        <Swiper
+          className="h-[90vh] relative"
+          modules={[Navigation]}
+          spaceBetween={10}
+          slidesPerView={1}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          <SwiperSlide>
+            <div className="flex flex-col items-center gap-[8rem]">
+              <CourseCard
+                imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                rating="4.9"
+                category="التصميم"
+                title="كورس تصميم الهوية البصرية"
+                date="14 - 07 - 2023"
+                duration="22hr 30min"
+              />
+              <CourseCard
+                imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                rating="4.9"
+                category="البرمجة"
+                title="كورس   برمجة التطبيقات"
+                date="14 - 07 - 2023"
+                duration="22hr 30min"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <CourseCard
+              imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+              rating="4.9"
+              category="التصميم"
+              title="كورس تصميم الهوية البصرية"
+              date="14 - 07 - 2023"
+              duration="22hr 30min"
+            />
+            <CourseCard
+              imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+              rating="4.9"
+              category="البرمجة"
+              title="كورس   برمجة التطبيقات"
+              date="14 - 07 - 2023"
+              duration="22hr 30min"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CourseCard
+              imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+              rating="4.9"
+              category="التصميم"
+              title="كورس تصميم الهوية البصرية"
+              date="14 - 07 - 2023"
+              duration="22hr 30min"
+            />
+            <CourseCard
+              imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+              rating="4.9"
+              category="البرمجة"
+              title="كورس   برمجة التطبيقات"
+              date="14 - 07 - 2023"
+              duration="22hr 30min"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <div className="h-screen flex justify-center items-center hidden lg:flex">
         <div className="h-full w-[95%] ">
           <div className="w-full h-[12%] flex flex-col gap-10">
             <div className="h-[60%] flex items-center justify-center">
@@ -325,14 +392,14 @@ function Home() {
         </div>
       </div>
       <div className="h-screen  flex justify-center items-center">
-        <div className="h-full w-[95%] ">
+        <div className="h-full w-[95%] flex flex-col gap-[5rem] ">
           <div className="w-full h-[12%] flex flex-col gap-10">
-            <div className="h-[60%] flex items-center justify-center">
+            <div className="h-[20%] flex items-center justify-center">
               <p className="text-[#15313F] text-3xl font-semibold">
                 الدورات التدريبية
               </p>
             </div>
-            <div className="h-[40%] w-[83%] flex justify-end px-2">
+            <div className="h-[40%] w-[83%] flex justify-end px-2 ">
               <ul className="hidden lg:flex flex-row-reverse gap-12">
                 <li
                   className={`hover:cursor-pointer text-lg ${
@@ -401,20 +468,48 @@ function Home() {
             }}
             className="h-full flex flex-col justify-center items-center"
           >
-            <div className="h-[50%] mt-10 flex justify-center gap-14">
+            <div className="h-[50%]  ml-12 lg:ml-0 mt-10 flex justify-center gap-14">
               <div className="hidden lg:flex">
-                <WorkshopCard />
+                <WorkshopCard
+                  imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                  rating="4.9"
+                  category="البرمجة"
+                  title="كورس  برمجة واجهات المواقع"
+                  date="14 - 07 - 2023"
+                  duration="22hr 30min"
+                />
               </div>
               <div>
-                <WorkshopCard />
+                <WorkshopCard
+                  imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                  rating="4.9"
+                  category="البرمجة"
+                  title="كورس  برمجة واجهات المواقع"
+                  date="14 - 07 - 2023"
+                  duration="22hr 30min"
+                />
               </div>
             </div>
-            <div className="h-[50%] mt-10 flex justify-center gap-14">
+            <div className="h-[50%] ml-12 mt-10 lg:ml-0 flex justify-center gap-14">
               <div className="hidden lg:flex">
-                <WorkshopCard />
+                <WorkshopCard
+                  imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                  rating="4.9"
+                  category="البرمجة"
+                  title="كورس  برمجة واجهات المواقع"
+                  date="14 - 07 - 2023"
+                  duration="22hr 30min"
+                />
               </div>
               <div>
-                <WorkshopCard />
+                <WorkshopCard
+                  imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                  rating="4.9"
+                  category="البرمجة"
+                  title="كورس  برمجة واجهات المواقع"
+                  date="14 - 07 - 2023"
+                  duration="22hr 30min"
+                />
               </div>
             </div>
             <div className="w-full h-[10%] mt-12 lg:mt-10 flex justify-center items-center">
@@ -440,7 +535,7 @@ function Home() {
               <InstructorCard />
             </div>
             <div>
-              <InstructorCard/>
+              <InstructorCard />
             </div>
           </div>
         </div>
@@ -539,7 +634,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

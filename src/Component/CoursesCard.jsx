@@ -1,8 +1,9 @@
 import { IconStar, IconClock, IconCalendar } from "@tabler/icons-react";
-
+import { Link } from "react-router-dom";
 function CourseCard({ imageUrl, rating, category, title, date, duration }) {
   return (
-    <div>
+    <Link to='/Subpage'>
+        <div>
       <div
         style={{
           borderRadius: "16px 16px 0 0 ",
@@ -58,6 +59,7 @@ function CourseCard({ imageUrl, rating, category, title, date, duration }) {
         </div>
       </div>
     </div>
+    </Link>
   );
 }
 

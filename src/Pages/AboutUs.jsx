@@ -1,5 +1,6 @@
 import Header from "../Component/Header";
 import MainBackground from "../Component/MainBackground.jsx";
+import Footer from "../Component/Footer.jsx"
 import InstructorCard from "../Component/InstructorCard.jsx";
 import dottedWindow from "../../public/Icons/dottedWindow.svg";
 import supporterLogo1 from "../../public/Icons/supporterLogo.svg";
@@ -268,6 +269,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

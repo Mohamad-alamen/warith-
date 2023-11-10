@@ -6,6 +6,7 @@ import Courses from './Pages/courses.jsx'
 import Workshop from './Pages/Workshop.jsx'
 import News from './Pages/News.jsx'
 import ContactUs from './Pages/ContactUs.jsx'
+import Subpage from './Pages/Subpage.jsx';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/Workshop" element={<Workshop/>}/>
           <Route path="/News" element={<News/>}/>
           <Route path="/ContactUs" element={<ContactUs/>}/>
-
+          <Route path="/Subpage" element={<Subpage/>}/>
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,5 +1,6 @@
 import MainBackground from "../Component/MainBackground.jsx";
 import Header from "../Component/Header";
+import Footer from "../Component/Footer.jsx"
 import { IconMail, IconPhoneCall, IconMapPin } from "@tabler/icons-react";
 
 function ContactUs() {
@@ -112,6 +113,7 @@ function ContactUs() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

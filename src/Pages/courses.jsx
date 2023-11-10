@@ -162,7 +162,8 @@ function Courses() {
   const coursesPerPage = 12;
 
   const handleSearch = (event) => {
-    setSearchQuery(event.target.value);
+      setSearchQuery(event.target.value);
+    
   };
 
   const handlePageChange = (selectedPage) => {
@@ -191,10 +192,18 @@ function Courses() {
     <div>
       <Header />
 
-      <MainBackground FirstWord="الورش" SecondWord="التدريبية"/>
+      <MainBackground FirstWord="الدورات" SecondWord="التدريبية"/>
       <div className="flex justify-center flex-col items-center">
       <div className="h-[8rem] w-[80%]  flex flex-col items-center justify-around">
-      <input className="bg-transparent border-b p-2 text-right outline-none border-black" type="text" name="text" id="text" placeholder="ابحث عن برنامج تدريبي" value={searchQuery} onChange={handleSearch} />
+      <input
+  className="lg:bg-transparent h-[40%] w-[100%] lg:w-fit lg:h-fit lg:border-b p-2 text-right outline-none border-black placeholder-bold"
+  type="text"
+  name="text"
+  id="text"
+  placeholder="ابحث عن برنامج تدريبي"
+  value={searchQuery}
+  onChange={handleSearch}
+/>
       <div className="h-[40%] w-[87%] flex justify-center">
   <ul className="hidden xl:flex flex-row-reverse gap-12">
     <li
