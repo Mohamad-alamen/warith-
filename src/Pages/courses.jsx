@@ -17,33 +17,33 @@ function Courses() {
       duration: "22hr 30min",
     },
     {
-        imageUrl:
-          "https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg",
-        rating: 4.5,
-        category: "التصميم",
-        title: 'كورس التصميم الداخلي"',
-        date: "14 - 07 - 2023",
-        duration: "22hr 30min",
-      },
-      
+      imageUrl:
+        "https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg",
+      rating: 4.5,
+      category: "التصميم",
+      title: 'كورس التصميم الداخلي"',
+      date: "14 - 07 - 2023",
+      duration: "22hr 30min",
+    },
+
     {
-        imageUrl:
-          "https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg",
-        rating: 4.5,
-        category: "التصميم",
-        title: 'كورس التصميم الداخلي"',
-        date: "14 - 07 - 2023",
-        duration: "22hr 30min",
-      },
+      imageUrl:
+        "https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg",
+      rating: 4.5,
+      category: "التصميم",
+      title: 'كورس التصميم الداخلي"',
+      date: "14 - 07 - 2023",
+      duration: "22hr 30min",
+    },
     {
-        imageUrl:
-          "https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg",
-        rating: 4.5,
-        category: "التصميم",
-        title: 'كورس التصميم الداخلي"',
-        date: "14 - 07 - 2023",
-        duration: "22hr 30min",
-      },
+      imageUrl:
+        "https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg",
+      rating: 4.5,
+      category: "التصميم",
+      title: 'كورس التصميم الداخلي"',
+      date: "14 - 07 - 2023",
+      duration: "22hr 30min",
+    },
     {
       imageUrl:
         "https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg",
@@ -100,15 +100,6 @@ function Courses() {
       duration: "22hr 30min",
     },
     {
-        imageUrl:
-          "https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg",
-        rating: 4.9,
-        category: "البرمجة",
-        title: "كورس   برمجة التطبيقات",
-        date: "14 - 07 - 2023",
-        duration: "22hr 30min",
-      },
-    {
       imageUrl:
         "https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg",
       rating: 4.9,
@@ -153,7 +144,15 @@ function Courses() {
       date: "14 - 07 - 2023",
       duration: "22hr 30min",
     },
-    
+    {
+      imageUrl:
+        "https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg",
+      rating: 4.9,
+      category: "البرمجة",
+      title: "كورس   برمجة التطبيقات",
+      date: "14 - 07 - 2023",
+      duration: "22hr 30min",
+    },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -162,8 +161,7 @@ function Courses() {
   const coursesPerPage = 12;
 
   const handleSearch = (event) => {
-      setSearchQuery(event.target.value);
-    
+    setSearchQuery(event.target.value);
   };
 
   const handlePageChange = (selectedPage) => {
@@ -192,71 +190,81 @@ function Courses() {
     <div>
       <Header />
 
-      <MainBackground FirstWord="الدورات" SecondWord="التدريبية"/>
+      <MainBackground FirstWord="الدورات" SecondWord="التدريبية" />
       <div className="flex justify-center flex-col items-center">
-      <div className="h-[8rem] w-[80%]  flex flex-col items-center justify-around">
-      <input
-  className="lg:bg-transparent h-[40%] w-[100%] lg:w-fit lg:h-fit lg:border-b p-2 text-right outline-none border-black placeholder-bold"
-  type="text"
-  name="text"
-  id="text"
-  placeholder="ابحث عن برنامج تدريبي"
-  value={searchQuery}
-  onChange={handleSearch}
-/>
-      <div className="h-[40%] w-[87%] flex justify-center">
-  <ul className="hidden xl:flex flex-row-reverse gap-12">
-    <li
-      className={`hover:cursor-pointer text-lg ${
-        selectedCategory === "" ? "font-bold" : "text-[#8C8C8C]"
-      }`}
-      onClick={() => setSelectedCategory("")}
-    >
-      جميع التصنيفات
-    </li>
-    <li
-      className={`hover:cursor-pointer text-lg ${
-        selectedCategory === "ريادة الاعمال" ? "font-bold" : "text-[#8C8C8C]"
-      }`}
-      onClick={() => setSelectedCategory("ريادة الاعمال")}
-    >
-      ريادة الاعمال
-    </li>
-    <li
-      className={`hover:cursor-pointer text-lg ${
-        selectedCategory === "البرمجة" ? "font-bold" : "text-[#8C8C8C]"
-      }`}
-      onClick={() => setSelectedCategory("البرمجة")}
-    >
-      البرمجة
-    </li>
-    <li
-      className={`hover:cursor-pointer text-lg ${
-        selectedCategory === "الهندسة" ? "font-bold" : "text-[#8C8C8C]"
-      }`}
-      onClick={() => setSelectedCategory("الهندسة")}
-    >
-      الهندسة
-    </li>
-    <li
-      className={`hover:cursor-pointer text-lg ${
-        selectedCategory === "المهارات الشخصية" ? "font-bold" : "text-[#8C8C8C]"
-      }`}
-      onClick={() => setSelectedCategory("المهارات الشخصية")}
-    >
-      المهارات الشخصية
-    </li>
-    <li
-      className={`hover:cursor-pointer text-lg ${
-        selectedCategory === "التصميم" ? "font-bold" : "text-[#8C8C8C]"
-      }`}
-      onClick={() => setSelectedCategory("التصميم")}
-    >
-      التصميم
-    </li>
-  </ul>
-</div>
-      </div>
+        <div className="h-[8rem] w-[80%]  flex flex-col items-center justify-around">
+          <input
+            className="lg:bg-transparent h-[40%] w-[100%] lg:w-fit lg:h-fit lg:border-b p-2 text-right outline-none border-black placeholder-bold"
+            type="text"
+            name="text"
+            id="text"
+            placeholder="ابحث عن برنامج تدريبي"
+            value={searchQuery}
+            onChange={handleSearch}
+          />
+          <div className="h-[40%] w-[87%] flex justify-center">
+            <ul className="hidden xl:flex flex-row-reverse gap-12">
+              <li
+                className={`hover:cursor-pointer text-lg ${
+                  selectedCategory === "" ? "font-bold" : "text-[#8C8C8C]"
+                }`}
+                onClick={() => setSelectedCategory("")}
+              >
+                جميع التصنيفات
+              </li>
+              <li
+                className={`hover:cursor-pointer text-lg ${
+                  selectedCategory === "ريادة الاعمال"
+                    ? "font-bold"
+                    : "text-[#8C8C8C]"
+                }`}
+                onClick={() => setSelectedCategory("ريادة الاعمال")}
+              >
+                ريادة الاعمال
+              </li>
+              <li
+                className={`hover:cursor-pointer text-lg ${
+                  selectedCategory === "البرمجة"
+                    ? "font-bold"
+                    : "text-[#8C8C8C]"
+                }`}
+                onClick={() => setSelectedCategory("البرمجة")}
+              >
+                البرمجة
+              </li>
+              <li
+                className={`hover:cursor-pointer text-lg ${
+                  selectedCategory === "الهندسة"
+                    ? "font-bold"
+                    : "text-[#8C8C8C]"
+                }`}
+                onClick={() => setSelectedCategory("الهندسة")}
+              >
+                الهندسة
+              </li>
+              <li
+                className={`hover:cursor-pointer text-lg ${
+                  selectedCategory === "المهارات الشخصية"
+                    ? "font-bold"
+                    : "text-[#8C8C8C]"
+                }`}
+                onClick={() => setSelectedCategory("المهارات الشخصية")}
+              >
+                المهارات الشخصية
+              </li>
+              <li
+                className={`hover:cursor-pointer text-lg ${
+                  selectedCategory === "التصميم"
+                    ? "font-bold"
+                    : "text-[#8C8C8C]"
+                }`}
+                onClick={() => setSelectedCategory("التصميم")}
+              >
+                التصميم
+              </li>
+            </ul>
+          </div>
+        </div>
         <div className="w-[80%] h-full flex flex-col">
           <div className="h-[100%] mt-10 flex flex-wrap justify-center gap-[6rem] ">
             {paginatedCourses.map((course, index) => (
@@ -283,7 +291,8 @@ function Courses() {
               pageRangeDisplayed={5}
               onPageChange={handlePageChange}
               containerClassName={"pagination"}
-              activeClassName="bg-black text-white text-xs w-[24px] h-[28px] flex items-center justify-center"                          />
+              activeClassName="bg-black text-white text-xs w-[24px] h-[28px] flex items-center justify-center"
+            />
           </div>
         </div>
       </div>

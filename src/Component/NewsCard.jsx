@@ -13,20 +13,18 @@ function NewsCard({ imageSrc, title, onClick }) {
   return (
     <div onClick={handleCardClick}>
       <div
-        className="flex items-center  flex-row-reverse w-[100%] lg:w-[70%]"
+        className="flex items-center  flex-row-reverse lg:h-[10rem] h-[10rem] w-[100%] lg:w-[40rem]"
         style={{
-          height: '10rem',
-          backgroundColor: 'white',
-          boxShadow: '0 2px 9px rgba(0, 0, 0, 0.7)',
+          // boxShadow: '0 2px 9px rgba(0, 0, 0, 0.7)',
           cursor: 'pointer',
         }}
       >
-        <img className="h-full w-[40%]" src={imageSrc} alt="" />
+        <img className="w-[40%]" src={imageSrc} alt="" />
         <div className="h-[90%] w-[60%] flex flex-col justify-center gap-2 p-4 ">
           <p className="font-semibold text-sm text-right lg:text-lg">{title}</p>
           <div className="flex items-center gap-1 w-fit hover:cursor-pointer">
             <IconArrowLeftBar />
-            <p className="lg:font-bold  text-[#213469]">اقرا المزيد</p>
+            <p className="lg:font-bold   text-[#213469]">اقرا المزيد</p>
           </div>
         </div>
       </div>

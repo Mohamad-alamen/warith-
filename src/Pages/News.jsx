@@ -61,8 +61,9 @@ function News() {
     <div>
       <Header />
       <MainBackground FirstWord="اخر" SecondWord="الاخبار" />
-      <div className="h-screen mt-[12rem] flex  justify-center">
-        <div className="h-full w-[90%] flex flex-col items-center justify-center gap-4  bg-red-200">
+      <div className="h-screen mt-[12rem] flex  justify-center items-center">
+        <div className="w-[80%]">
+        <div className="h-full flex flex-col items-center justify-center gap-5">
           {paginatedItems.map((news, index) => (
             <NewsCard key={index} imageSrc={news.imageSrc} title={news.title} />
           ))}
@@ -81,6 +82,7 @@ function News() {
               activeClassName="bg-black text-white text-xs w-[24px] h-[28px] flex items-center justify-center"
             />
           </div>
+        </div>
         </div>
       </div>
       <Footer />

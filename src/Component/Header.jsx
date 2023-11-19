@@ -78,7 +78,7 @@ function Header() {
               </ul>
             </div>
           )}
-          <div className="hidden xl:block h-full w-[50%]">
+          <div className="hidden xl:block h-full w-[60%]">
             <p className="text-right font-semibold border-b border-[#FFA300] p-2">
               جامعة وارث الانبياء
             </p>
