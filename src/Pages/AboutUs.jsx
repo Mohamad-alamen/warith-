@@ -7,14 +7,13 @@ import supporterLogo1 from "../../public/Icons/supporterLogo.svg";
 import supporterLogo2 from "../../public/Icons/supporterLogo2.svg";
 import supporterLogo3 from "../../public/Icons/supporterLogo3.svg";
 import supporterLogo4 from "../../public/Icons/supporterLogo4.svg";
-import {
-  IconEye,
-  IconTargetArrow,
-  IconFlag2Filled,
-  IconDeviceLaptop,
-  IconBinaryTree,
-  IconBuilding,
-} from "@tabler/icons-react";
+
+import { FaBuilding } from "react-icons/fa";
+import { FaNetworkWired } from "react-icons/fa";
+import { PiMonitorPlayFill } from "react-icons/pi";
+import { MdRemoveRedEye } from "react-icons/md";
+import { TbTargetArrow } from "react-icons/tb";
+import { FaFlag } from "react-icons/fa6";
 import yellowLine from "../../public/Icons/yellowLine.svg";
 import yellowArrow from "../../public/Icons/yellowArrow.svg";
 
@@ -86,13 +85,13 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="h-screen mt-10 flex flex-col flex-col-reverse lg:flex-row">
-        <div className="h-full w-[100%] lg:w-[50%] flex items-center justify-center lg:justify-end">
-          <div className="h-[100%] md:h-[80%] w-[80%] flex flex-col  items-end justify-between pr-4">
+      <div className="h-screen mt-10 flex flex-col flex-col-reverse gap-8 lg:flex-row">
+        <div className="h-full w-[100%]  lg:w-[50%] flex items-center justify-center lg:justify-end">
+          <div className="h-[100%] md:h-[80%] w-[80%] flex flex-col  items-end justify-center gap-2">
             <div className="w-[80%] h-[20%] flex flex-col items-end justify-center gap-1 lg:gap-6">
               <div className="flex gap-2">
                 <p className="text-xl font-bold">رؤيتنا</p>
-                <IconEye className="text-white h-7 w-10 bg-[#FFA300]" />
+                <MdRemoveRedEye size={36} className="text-white p-1 bg-[#FFA300]" />
               </div>
               <p className="text-[#8C8C8C]">تعزيز القدرات لخلق الفرص</p>
             </div>
@@ -100,7 +99,7 @@ function AboutUs() {
               <div className="flex gap-2">
                 <p className="text-xl font-bold">رسالتنا</p>
 
-                <IconTargetArrow className="text-white h-7 w-10 bg-[#FFA300]" />
+                <TbTargetArrow size={36} className="text-white p-1 bg-[#FFA300]" />
               </div>
               <p className="text-[#8C8C8C]">
                 التمكين المهني لطلبة وخريجي الجامعة ليأخذوا دورهم الحقيقي في
@@ -111,7 +110,7 @@ function AboutUs() {
               <div className="flex gap-2">
                 <p className="text-xl font-bold">مهمتنا</p>
 
-                <IconFlag2Filled className="text-white h-7 w-10 bg-[#FFA300]" />
+                <FaFlag size={36} className="text-white p-1 bg-[#FFA300]" />
               </div>
               <ul className="flex flex-col gap-1 list-disc">
                 <li className="flex items-center gap-3 flex-row-reverse">
@@ -153,20 +152,20 @@ function AboutUs() {
         </div>
         <div className="h-full w-[100%] lg:w-[50%] flex items-center justify-center lg:justify-start">
           <img
-            className="h-[80%] w-[80%] object-cover"
+            className="h-[80%] w-[60%] object-cover"
             src="https://uowa.edu.iq/filestorage/file_16700031080.jpg"
             alt=""
           />
         </div>
       </div>
-      <div className="h-screen mt-40 flex flex-col lg:flex-row overflow-hidden relative">
+      <div className="h-screen mt-0 lg:mt-[20rem] flex flex-col lg:flex-row overflow-hidden relative">
         <div
           style={{
             backgroundImage: `url(${yellowArrow})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
           }}
-          className="w-40 h-20 lg:h-[4rem] md:opacity-0 lg:w-[14rem] absolute top-[5rem] right-[5rem] lg:left-[18rem] lg:top-[8rem] xl:opacity-100"
+          className="w-[8rem] h-20 lg:h-[12rem] lg:w-[14rem] absolute top-[3.5rem] right-[9rem] lg:left-[18rem] lg:top-[8rem]"
         ></div>
         <div
           style={{
@@ -177,44 +176,44 @@ function AboutUs() {
           className=" absolute h-[9rem] w-[5rem]  lg:h-[12rem] lg:w-[12rem] top-[18rem] left-[1rem] lg:top-[28rem] lg:left-[18rem]"
         ></div>
         <div className="h-full w-[100%] flex flex-col justify-around  lg:w-[50%] ">
-          <div className="h-[30%] flex  flex-col items-end justify-center gap-8 pr-2">
-            <p className="text-[#213469] text-sm  lg:text-lg font-bold hover:cursor-pointer">
+          <div className="h-[30%] flex  flex-col items-end justify-around  pr-2">
+            <p className="text-[#213469] text-sm   lg:text-lg font-bold hover:cursor-pointer">
               سجل الان
             </p>
             <p className="text-[#15313F] text- flex  flex-row-reverse gap-2 lg:text-4xl font-bold">
               انضم الى مجتمع <p>Warith Elevate</p>
             </p>
-            <p className="text-[#737373] text-right text-sm lg:text-lg">
+            <p className="text-[#737373] text-right text-sm lg:text-lg  w-[90%]">
               انضم الينا في رحلة الاكتشاف والتعلم والابتكار، كن جزءا من مجتمع
               يحتفي بالتطوير، ويتقبل التحديات، ويحول الافكار الى مشاريع ذات
               تأثير.
             </p>
           </div>
-          <div className="h-[50%] flex flex-col justify-between">
-            <div className="h-[33%] flex justify-end items-center gap-14 p-2">
+          <div className="h-[40%] flex flex-col justify-between">
+            <div className="h-[33%] flex justify-end items-center gap-5 p-2">
               <p className="font-bold text-lg">توفير حاضنات اعمال</p>
               <div className="bg-[#5FAEC4] rounded-full p-2">
-                <IconBuilding className="h-10 w-10 text-white" />
+                <FaBuilding size={30} className=" text-white" />
               </div>
             </div>
-            <div className="h-[33%] flex justify-end items-center gap-14 p-2">
+            <div className="h-[33%] flex justify-end items-center gap-5 p-2">
               <p className="font-bold text-lg"> شبكات التواصل الفعال</p>
               <div className="bg-[#5FAEC4] rounded-full p-2">
-                <IconBinaryTree className="h-10 w-10 text-white" />
+              <FaNetworkWired size={30} className=" text-white" />
               </div>
             </div>
-            <div className="h-[33%] flex justify-end items-center gap-14 p-2">
+            <div className="h-[33%] flex justify-end items-center gap-5 p-2">
               <p className="font-bold text-lg">
                 {" "}
                 ورش العمل والدورات التدريبية{" "}
               </p>
               <div className="bg-[#5FAEC4] rounded-full p-2">
-                <IconDeviceLaptop className="h-10 w-10 text-white font-normal" />
+              <PiMonitorPlayFill size={30} className=" text-white" />
               </div>
             </div>
           </div>
           <div className="h-[15%] flex items-center justify-end p-2">
-            <button className="border px-12 py-4 text-lg font-semibold  border-2 border-black rounded ">
+            <button className="border px-8 py-3 lg:px-12 lg:py-4 text-lg font-semibold  border-2 bg-[#15313F] text-white rounded-xl ">
               {" "}
               Warith Elevate انضم الان الى
             </button>
@@ -234,33 +233,33 @@ function AboutUs() {
           />
         </div>
       </div>
-      <div className="h-screen w-full  flex justify-center items-center">
-        <div className="w-[80%] h-[40%] bg-white">
+      <div className="h-[60vh]  w-full  flex justify-center items-center">
+        <div className="w-[60rem] h-[18rem] bg-white">
           <div className="h-[30%]  flex justify-center items-center">
             <p className="text-[#15313F] font-semibold text-3xl border-b-2 pb-3 border-[#FFA300]">
               المؤوسسات الداعمة
             </p>
           </div>
           <div className="w-[100%] h-[70%] flex items-center justify-around flex-row-reverse">
-            <img src={supporterLogo1} alt="" className="h-[80%] w-[20%]" />
-            <img src={supporterLogo2} alt="" className="h-[80%] w-[20%]" />
-            <img src={supporterLogo3} alt="" className="h-[80%] w-[20%]" />
-            <img src={supporterLogo4} alt="" className="h-[80%] w-[20%]" />
+            <img src={supporterLogo1} alt="" className="h-[80%] w-[50%] lg:w-[20%]" />
+            <img src={supporterLogo2} alt="" className="h-[80%] w-[20%] hidden lg:flex" />
+            <img src={supporterLogo3} alt="" className="h-[80%] w-[50%] lg:w-[20%]"/>
+            <img src={supporterLogo4} alt="" className="h-[80%] w-[20%] hidden lg:flex" />
           </div>
         </div>
       </div>
-      <div className="h-screen mt-10 flex items-center ">
-        <div className="w-full h-80 bg-white">
-          <div className="h-[30%] w-full flex justify-center items-center">
+      <div className="h-screen flex items-center justify-center">
+        <div className="w-full h-80">
+          <div className="h-[30%] bg-white w-full flex justify-center items-center">
             <p className="text-[#15313F] text-xl md:text-3xl font-semibold">
               Warith Elevate تعرف على مدربين
             </p>
           </div>
-          <div className="h-[70%] w-full bg-white flex justify-around items-center">
-            <div className="hidden lg:flex">
+          <div className="h-[100%] w-[100%] bg-white flex justify-end lg:justify-around items-center">
+            <div className="hidden  lg:flex">
               <InstructorCard />
             </div>
-            <div className="hidden lg:flex ">
+            <div className="hidden lg:flex">
               <InstructorCard />
             </div>
             <div>

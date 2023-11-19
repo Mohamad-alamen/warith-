@@ -6,6 +6,10 @@ import {
   IconBrandInstagram,
   IconBrandYoutube,
 } from "@tabler/icons-react";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 function Footer() {
   return (
     <div>
@@ -55,35 +59,34 @@ function Footer() {
         </p>
         <div className="flex gap-3 pb-3 lg:hidden">
           <div className="h-12 w-12 bg-white rounded-full flex items-center justify-center">
-            <IconBrandFacebook className="h-8 w-8" />
+            <FaFacebookF size={24}/>
           </div>
           <div className="h-12 w-12 bg-white rounded-full flex items-center justify-center">
-            <IconBrandInstagram className="h-8 w-8" />
+            <FaInstagram size={24}/>
           </div>
           <div className="h-12 w-12 bg-white rounded-full flex items-center justify-center">
-            <IconBrandTwitter className="h-8 w-8" />
+            <FaTwitter size={24} />
           </div>
           <div className="h-12 w-12 bg-white rounded-full flex items-center justify-center">
-            <IconBrandYoutube className="h-8 w-8" />
+            <FaYoutube size={24} />
           </div>
         </div>
-        <div className="w-[100%] h-14 hidden lg:flex lg:flex-col lg:justify-center lg:items-end gap-4 lg:absolute lg:bottom-0">
-        <div className="w-[100%] h-[0.1rem] bg-[#FFA300] "></div>
-        <p className="text-sm text-white hidden lg:flex mr-4">
+        <div className="w-[100%] h-[20%] hidden lg:flex flex-row-reverse justify-between lg:items-center gap-4 lg:absolute lg:bottom-0 overflow-hidden border-t border-[#FFA300]">
+        <p className="text-sm text-white hidden lg:flex mr-4 p-4">
           العنوان: العراق - كربلاء المقدسة / طريق بغداد - كربلاء (عمود 119)
         </p>
-        <div className="fixed bottom-0 left-0 w-full flex justify-center lg:hidden items-center">
-          <div className="h-12 w-12 lg:h-8 lg:w-8 bg-white rounded-full flex items-center justify-center">
-            <IconBrandFacebook className="h-8 w-8" />
+        <div className="flex gap-3 p-14">
+          <div className="h-12 w-12 bg-white rounded-full flex items-center justify-center">
+            <FaFacebookF size={24}/>
           </div>
-          <div className="h-12 w-12 lg:h-8 lg:w-8 bg-white rounded-full flex items-center justify-center">
-            <IconBrandInstagram className="h-8 w-8" />
+          <div className="h-12 w-12 bg-white rounded-full flex items-center justify-center">
+            <FaInstagram size={24}/>
           </div>
-          <div className="h-12 w-12  lg:h-8 lg:w-8 bg-white rounded-full flex items-center justify-center">
-            <IconBrandTwitter className="h-8 w-8" />
+          <div className="h-12 w-12 bg-white rounded-full flex items-center justify-center">
+            <FaTwitter size={24} />
           </div>
-          <div className="h-12 w-12 lg:h-8 lg:w-8 bg-white rounded-full flex items-center justify-center">
-            <IconBrandYoutube className="h-8 w-8" />
+          <div className="h-12 w-12 bg-white rounded-full flex items-center justify-center">
+            <FaYoutube size={24} />
           </div>
         </div>
         </div>

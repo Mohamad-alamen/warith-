@@ -9,7 +9,21 @@ body {
     padding: 0;
   }
 
-  .placeholder-bold::placeholder {
-    font-weight: bold;
+  .placeholder-bold::placeholder{
     height: 100%;
   }
+
+
+  .my-swiper .swiper-button-prev,
+  .my-swiper .swiper-button-next {
+    color: white;
+    opacity: 1;
+    border-color: white;
+  }
+  @media (max-width: 900px) {
+    .my-swiper .swiper-button-prev,
+    .my-swiper .swiper-button-next {
+      --swiper-navigation-size: 25px;
+    }
+  }
+  

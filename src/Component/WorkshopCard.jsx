@@ -1,4 +1,6 @@
-import { IconClock, IconCalendar, IconStar } from "@tabler/icons-react";
+import { FiClock } from "react-icons/fi";
+import { SlCalender } from "react-icons/sl";
+import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 function WorkshopCard({ rating, category, title, date, duration }) {
   return (
@@ -22,10 +24,9 @@ function WorkshopCard({ rating, category, title, date, duration }) {
         >
           <div className="h-[20%] w-[95%] flex justify-between items-center">
             <div className="w-[12%] flex justify-between items-center">
-              <IconStar
+              <FaStar size={18}
                 style={{
                   color: "#FFA300",
-                  height: "1.2rem",
                 }}
               />
               <p className="font-bold">{rating}</p>
@@ -49,7 +50,7 @@ function WorkshopCard({ rating, category, title, date, duration }) {
                 >
                   {date}
                 </p>
-                <IconCalendar />
+                <SlCalender size={20} />
               </div>
               <div className="w-[30%]  h-full flex items-center justify-around">
                 <p
@@ -60,7 +61,7 @@ function WorkshopCard({ rating, category, title, date, duration }) {
                 >
                   {duration}
                 </p>
-                <IconClock />
+                <FiClock size={20} />
               </div>
             </div>
           </div>

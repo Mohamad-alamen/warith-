@@ -1,4 +1,7 @@
 import { IconWorld, IconMail, IconBrandLinkedin } from "@tabler/icons-react";
+import { FaLinkedin } from "react-icons/fa";
+import { TiWorld } from "react-icons/ti";
+import { IoMdMail } from "react-icons/io";
 
 function InstructorCard() {
   return (
@@ -22,13 +25,13 @@ function InstructorCard() {
             <p className="text-sm text-[#737373] text-right">
               انضم الينا في رحلة الاكتشاف والتعلم والابتكار، كن جزءا من مجتمع
               يحتفي بالتطوير، ويتقبل التحديات، ويحول الافكار الى مشاريع ذات
-              تأثير.
-              انضم الينا في رحلة الاكتشاف والتعلم والابتكار، كن جزءا من مجتمع
+              تأثير. انضم الينا في رحلة الاكتشاف والتعلم والابتكار، كن جزءا من
+              مجتمع
             </p>
             <div className="h-[20%] flex gap-3 text-[#213469] pl-5 ">
-              <IconWorld className="hover:cursor-pointer" />
-              <IconMail className="hover:cursor-pointer" />
-              <IconBrandLinkedin className="hover:cursor-pointer" />
+              <TiWorld size={24} />
+              <IoMdMail size={24} />
+              <FaLinkedin size={24} />
             </div>
           </div>
         </div>

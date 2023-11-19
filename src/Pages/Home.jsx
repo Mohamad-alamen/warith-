@@ -6,11 +6,9 @@ import yellowArrow from "../../public/Icons/yellowArrow.svg";
 import WorkshopCard from "../Component/WorkshopCard.jsx";
 import InstructorCard from "../Component/InstructorCard.jsx";
 import NewsCard from "../Component/NewsCard.jsx";
-import {
-  IconDeviceLaptop,
-  IconBinaryTree,
-  IconBuilding,
-} from "@tabler/icons-react";
+import { FaBuilding } from "react-icons/fa";
+import { FaNetworkWired } from "react-icons/fa";
+import { PiMonitorPlayFill } from "react-icons/pi";
 import Logo from "../../public/Icons/Logo-2.svg";
 import Logo2 from "../../public/Icons/UNIVERSITY OF WARITH AL-ANBIYAA LOGO FINAL copy 1.svg";
 import supporterLogo1 from "../../public/Icons/supporterLogo.svg";
@@ -40,7 +38,7 @@ function Home() {
         <div className="h-[70vh] w-full relative">
           <div className="h-[90vh] w-full bg-[#15313F] opacity-40 absolute z-10 pointer-events-none"></div>
           <Swiper
-            className="h-[90vh] relative "
+            className="h-[90vh] relative my-swiper"
             modules={[Navigation]}
             spaceBetween={10}
             slidesPerView={1}
@@ -70,16 +68,18 @@ function Home() {
               />
             </SwiperSlide>
           </Swiper>
-          <div className="h-[100%] w-[70%] md:w-[40%] absolute top-20 right-20 z-20  lg:flex lg:flex-col lg:items-end  ">
-            <div className="h-[40%] flex justify-end items-center lg:w-[65%] lg:justify-end">
-              <img src={Logo} alt="" className="h-[60%] w-[40%]" />
-              <img src={Logo2} alt="" className="h-[60%] w-[40%]" />
+          <div className="lg:h-[100%] h-[60%] w-[70%] md:w-[40%]  absolute lg:top-20 lg:right-20 top-[9rem] right-10 z-20  lg:flex lg:flex-col lg:items-end  ">
+            <div className="h-[40%] flex justify-end pl-9 items-start lg:w-[65%] lg:justify-end">
+              <div className="h-[40%] w-[90%] flex justify-end items-end ">
+                <img src={Logo} alt="" className="lg:h-[6rem] h-[5rem]" />
+                <img src={Logo2} alt="" className="lg:h-[8rem] h-[6rem]" />
+              </div>
             </div>
             <div className="h-[60%] flex flex-col items-end gap-4 justify-center lg:items-end lg:gap-0 lg:justify-around">
-              <p className="text-3xl text-white font-thin text-right border-b-2 border-[#FFA300] pb-4">
+              <p className="lg:text-3xl text-xl  text-white font-thin text-right border-b-2 border-[#FFA300] pb-4">
                 مركز وارث للريادة والابتكار والتطوير
               </p>
-              <p className="text-5xl text-right font-bold text-white">
+              <p className="lg:text-5xl text-3xl text-right font-bold text-white">
                 اطلق <span className="text-[#FFA300]">قدراتك</span> <br />{" "}
                 <span className="text-[#FFA300]">وابتكر</span> مستقبلك
               </p>
@@ -98,14 +98,30 @@ function Home() {
             </p>
           </div>
           <div className="w-[100%] h-[70%] flex items-center justify-around flex-row-reverse">
-            <img src={supporterLogo1} alt="" className="h-[80%] w-[20%]" />
-            <img src={supporterLogo2} alt="" className="h-[80%] w-[20%]" />
-            <img src={supporterLogo3} alt="" className="h-[80%] w-[20%]" />
-            <img src={supporterLogo4} alt="" className="h-[80%] w-[20%]" />
+            <img
+              src={supporterLogo1}
+              alt=""
+              className="h-[80%] w-[50%] lg:w-[20%]"
+            />
+            <img
+              src={supporterLogo2}
+              alt=""
+              className="h-[80%] w-[20%] hidden lg:flex"
+            />
+            <img
+              src={supporterLogo3}
+              alt=""
+              className="h-[80%] w-[50%] lg:w-[20%]"
+            />
+            <img
+              src={supporterLogo4}
+              alt=""
+              className="h-[80%] w-[20%] hidden lg:flex"
+            />
           </div>
         </div>
       </div>
-      <div className="h-[90vh] lg:h-screen lg:hidden">
+      <div className="h-[65vh] lg:h-screen lg:hidden">
         <div className="w-full h-[12%] flex flex-col gap-10">
           <div className="h-[60%] flex items-center justify-center">
             <p className="text-[#15313F] text-3xl font-semibold">
@@ -115,7 +131,7 @@ function Home() {
           <div className="h-[40%] w-[87%] flex justify-end px-2"></div>
         </div>
         <Swiper
-          className="h-[90vh] relative"
+          className="h-full relative"
           modules={[Navigation]}
           spaceBetween={10}
           slidesPerView={1}
@@ -311,7 +327,7 @@ function Home() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
           }}
-          className="w-40 h-20 lg:h-[12rem] lg:w-[14rem] absolute top-[5rem] right-[5rem] lg:left-[18rem] lg:top-[8rem]"
+          className="w-[8rem] h-20 lg:h-[12rem] lg:w-[14rem] absolute top-[5rem] right-[9rem] lg:left-[18rem] lg:top-[8rem]"
         ></div>
         <div
           style={{
@@ -322,44 +338,44 @@ function Home() {
           className=" absolute h-[9rem] w-[5rem]  lg:h-[12rem] lg:w-[12rem] top-[18rem] left-[1rem] lg:top-[28rem] lg:left-[18rem]"
         ></div>
         <div className="h-full w-[100%] flex flex-col justify-around  lg:w-[50%] ">
-          <div className="h-[30%] flex  flex-col items-end justify-center gap-8 pr-2">
-            <p className="text-[#213469] text-sm  lg:text-lg font-bold hover:cursor-pointer">
+          <div className="h-[30%] flex  flex-col items-end justify-around  pr-2">
+            <p className="text-[#213469] text-sm   lg:text-lg font-bold hover:cursor-pointer">
               سجل الان
             </p>
             <p className="text-[#15313F] text- flex  flex-row-reverse gap-2 lg:text-4xl font-bold">
               انضم الى مجتمع <p>Warith Elevate</p>
             </p>
-            <p className="text-[#737373] text-right text-sm lg:text-lg">
+            <p className="text-[#737373] text-right text-sm lg:text-lg  w-[90%]">
               انضم الينا في رحلة الاكتشاف والتعلم والابتكار، كن جزءا من مجتمع
               يحتفي بالتطوير، ويتقبل التحديات، ويحول الافكار الى مشاريع ذات
               تأثير.
             </p>
           </div>
-          <div className="h-[50%] flex flex-col justify-between">
-            <div className="h-[33%] flex justify-end items-center gap-14 p-2">
+          <div className="h-[40%] flex flex-col justify-between">
+            <div className="h-[33%] flex justify-end items-center gap-5 p-2">
               <p className="font-bold text-lg">توفير حاضنات اعمال</p>
               <div className="bg-[#5FAEC4] rounded-full p-2">
-                <IconBuilding className="h-10 w-10 text-white" />
+                <FaBuilding size={30} className=" text-white" />
               </div>
             </div>
-            <div className="h-[33%] flex justify-end items-center gap-14 p-2">
+            <div className="h-[33%] flex justify-end items-center gap-5 p-2">
               <p className="font-bold text-lg"> شبكات التواصل الفعال</p>
               <div className="bg-[#5FAEC4] rounded-full p-2">
-                <IconBinaryTree className="h-10 w-10 text-white" />
+                <FaNetworkWired size={30} className=" text-white" />
               </div>
             </div>
-            <div className="h-[33%] flex justify-end items-center gap-14 p-2">
+            <div className="h-[33%] flex justify-end items-center gap-5 p-2">
               <p className="font-bold text-lg">
                 {" "}
                 ورش العمل والدورات التدريبية{" "}
               </p>
               <div className="bg-[#5FAEC4] rounded-full p-2">
-                <IconDeviceLaptop className="h-10 w-10 text-white font-normal" />
+                <PiMonitorPlayFill size={30} className=" text-white" />
               </div>
             </div>
           </div>
           <div className="h-[15%] flex items-center justify-end p-2">
-            <button className="border px-12 py-4 text-lg font-semibold  border-2 border-black rounded ">
+            <button className="border px-8 py-3 lg:px-12 lg:py-4 text-lg font-semibold  border-2 bg-[#15313F] text-white rounded-xl ">
               {" "}
               Warith Elevate انضم الان الى
             </button>
@@ -380,11 +396,11 @@ function Home() {
         </div>
       </div>
       <div className="h-screen lg:hidden">
-      <div className="h-[20%] flex items-center justify-center">
-              <p className="text-[#15313F] text-3xl font-semibold">
-                الدورات التدريبية
-              </p>
-            </div>
+        <div className="h-[20%] flex items-center justify-center">
+          <p className="text-[#15313F] text-3xl font-semibold">
+            الدورات التدريبية
+          </p>
+        </div>
         <Swiper
           className="h-[90vh] relative "
           modules={[Navigation]}
@@ -395,38 +411,38 @@ function Home() {
         >
           <SwiperSlide>
             <div className=" flex justify-center items-center">
-            <WorkshopCard
-              imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
-              rating="4.9"
-              category="البرمجة"
-              title="كورس  برمجة واجهات المواقع"
-              date="14 - 07 - 2023"
-              duration="22hr 30min"
-            />
+              <WorkshopCard
+                imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                rating="4.9"
+                category="البرمجة"
+                title="كورس  برمجة واجهات المواقع"
+                date="14 - 07 - 2023"
+                duration="22hr 30min"
+              />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className=" flex justify-center items-center">
-            <WorkshopCard
-              imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
-              rating="4.9"
-              category="البرمجة"
-              title="كورس  برمجة واجهات المواقع"
-              date="14 - 07 - 2023"
-              duration="22hr 30min"
-            />
+              <WorkshopCard
+                imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                rating="4.9"
+                category="البرمجة"
+                title="كورس  برمجة واجهات المواقع"
+                date="14 - 07 - 2023"
+                duration="22hr 30min"
+              />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className=" flex justify-center items-center">
-            <WorkshopCard
-              imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
-              rating="4.9"
-              category="البرمجة"
-              title="كورس  برمجة واجهات المواقع"
-              date="14 - 07 - 2023"
-              duration="22hr 30min"
-            />
+              <WorkshopCard
+                imageUrl="https://static-cse.canva.com/blob/1170432/creatingstunninggraphicsforyourteacherblog.jpg"
+                rating="4.9"
+                category="البرمجة"
+                title="كورس  برمجة واجهات المواقع"
+                date="14 - 07 - 2023"
+                duration="22hr 30min"
+              />
             </div>
           </SwiperSlide>
         </Swiper>
@@ -643,7 +659,7 @@ function Home() {
       </div>
       <div className="h-screen mt-90 flex  items-center ">
         <div
-          className="flex flex-col gap-12"
+          className="flex flex-col gap-14"
           style={{
             height: "60%",
             width: "100%",
@@ -652,16 +668,16 @@ function Home() {
           <div className="h-[12%] w-full flex items-center justify-center ">
             <p className="text-3xl font-semibold text-[#15313F] ">استكشف</p>
           </div>
-          <div className="h-[76%] flex justify-center">
-            <div className="h-full w-[60%] items-center  flex justify-between">
+          <div className="h-[76%] flex justify-center gap-8">
+            <div className="h-full w-[90%] items-center  flex justify-around">
               <iframe
-                className="h-full w-[100%] lg:w-[40%]"
+                className="h-[20rem] lg:h-[22rem] w-[100%] lg:w-[40rem]"
                 src="https://www.youtube.com/embed/glZLYYllXvM"
                 title="YouTube Video"
                 allowFullScreen
               />
               <iframe
-                className="h-full w-[40%] bg-green-400 hidden lg:flex"
+                className="lg:h-[22rem] w-[40rem] bg-green-400 hidden lg:flex"
                 src="https://www.youtube.com/embed/QthLlDFwVSE"
                 title="YouTube Video"
                 allowFullScreen
