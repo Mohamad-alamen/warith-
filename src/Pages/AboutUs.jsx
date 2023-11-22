@@ -19,7 +19,7 @@ import yellowArrow from "../../public/Icons/yellowArrow.svg";
 
 function AboutUs() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden flex flex-col gap-[4rem]">
       <Header />
       <MainBackground FirstWord="من" SecondWord="نحن" />
       <div className="h-screen flex flex-col gap-2 lg:flex-row lg:flex-row-reverse mt-10">
@@ -86,8 +86,8 @@ function AboutUs() {
         </div>
       </div>
       <div className="h-screen mt-10 flex flex-col flex-col-reverse gap-8 lg:flex-row">
-        <div className="h-full w-[100%]  lg:w-[50%] flex items-center justify-center lg:justify-end">
-          <div className="h-[100%] md:h-[80%] w-[80%] flex flex-col  items-end justify-center gap-2">
+        <div className="h-full w-[100%] lg:w-[50%] flex items-center justify-center lg:justify-end">
+          <div className="h-[100%] md:h-[80%] w-[80%] flex flex-col  items-end justify-center gap-2  gap-[4rem] lg:gap-0">
             <div className="w-[80%] h-[20%] flex flex-col items-end justify-center gap-1 lg:gap-6">
               <div className="flex gap-2">
                 <p className="text-xl font-bold">رؤيتنا</p>
@@ -150,9 +150,9 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="h-full w-[100%] lg:w-[50%] flex items-center justify-center lg:justify-start">
+        <div className="h-full  w-[100%] lg:w-[50%] flex items-center justify-center lg:justify-start">
           <img
-            className="h-[80%] w-[60%] object-cover"
+            className="h-[80%] w-[80%] object-cover"
             src="https://uowa.edu.iq/filestorage/file_16700031080.jpg"
             alt=""
           />
@@ -165,7 +165,7 @@ function AboutUs() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
           }}
-          className="w-[8rem] h-20 lg:h-[12rem] lg:w-[14rem] absolute top-[3.5rem] right-[9rem] lg:left-[18rem] lg:top-[8rem]"
+          className="w-[8rem] h-20 lg:h-[12rem]  lg:w-[14rem] hidden  absolute top-[5rem] right-[9rem] lg:left-[18rem] lg:top-[10rem] xl:top-[8rem] xl:left-[16rem]"
         ></div>
         <div
           style={{
@@ -173,7 +173,7 @@ function AboutUs() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
           }}
-          className=" absolute h-[9rem] w-[5rem]  lg:h-[12rem] lg:w-[12rem] top-[18rem] left-[1rem] lg:top-[28rem] lg:left-[18rem]"
+          className=" absolute h-[9rem] w-[5rem]  hidden  lg:h-[12rem] lg:w-[12rem] top-[18rem] left-[1rem] lg:top-[35rem] lg:left-[22rem] xl:top-[28rem] xl:left-[16rem]"
         ></div>
         <div className="h-full w-[100%] flex flex-col justify-around  lg:w-[50%] ">
           <div className="h-[30%] flex  flex-col items-end justify-around  pr-2">
@@ -199,7 +199,7 @@ function AboutUs() {
             <div className="h-[33%] flex justify-end items-center gap-5 p-2">
               <p className="font-bold text-lg"> شبكات التواصل الفعال</p>
               <div className="bg-[#5FAEC4] rounded-full p-2">
-              <FaNetworkWired size={30} className=" text-white" />
+                <FaNetworkWired size={30} className=" text-white" />
               </div>
             </div>
             <div className="h-[33%] flex justify-end items-center gap-5 p-2">
@@ -208,7 +208,7 @@ function AboutUs() {
                 ورش العمل والدورات التدريبية{" "}
               </p>
               <div className="bg-[#5FAEC4] rounded-full p-2">
-              <PiMonitorPlayFill size={30} className=" text-white" />
+                <PiMonitorPlayFill size={30} className=" text-white" />
               </div>
             </div>
           </div>
@@ -255,7 +255,7 @@ function AboutUs() {
               Warith Elevate تعرف على مدربين
             </p>
           </div>
-          <div className="h-[100%] w-[100%] bg-white flex justify-end lg:justify-around items-center">
+          <div className="h-[100%] w-[100%] bg-white flex justify-center lg:justify-around items-center">
             <div className="hidden  lg:flex">
               <InstructorCard />
             </div>
@@ -268,7 +268,9 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      <div className="mt-[4rem] lg:mt-6">
       <Footer/>
+      </div>
     </div>
   );
 }

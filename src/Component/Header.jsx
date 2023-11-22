@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Logo from "../../public/Icons/Logo.svg";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
-import Hamburger from "../../public/Icons/hamburger-menu.svg";
 
 function Header() {
   const [isNavBarVisible, setIsNavBarVisible] = useState(false);
@@ -24,7 +23,7 @@ function Header() {
           <button className="bg-white text-black px-2 py-1 rounded">EN</button>
         </div>
       </div>
-      <div className="h-[90%] lg:h-[65%] flex flex-row-reverse">
+      <div className="h-[90%] lg:h-[65%] flex flex-row-reverse mt-3">
         <div className="justify-between px-3 w-full h-full  xl:w-[25%] xl:px-0 flex xl:flex-row-reverse items-center xl:justify-center">
           <img src={Logo} alt="" className="h-30 w-[20%] md:h-20 xl:w-[40%]" />
           <div 
@@ -79,7 +78,7 @@ function Header() {
               </ul>
             </div>
           )}
-          <div className="hidden xl:block h-full w-[50%] ">
+          <div className="hidden xl:block h-full w-[50%]">
             <p className="text-right font-semibold border-b border-[#FFA300] p-2">
               جامعة وارث الانبياء
             </p>
@@ -186,8 +185,3 @@ function Header() {
 }
 
 export default Header;
-
-<div className="hidden xl:flex h-full w-[15%] flex flex-row-reverse items-center justify-start gap-8">
-  <button className="bg-[#15313F] text-white p-2 rounded">تسجيل الدخول</button>
-  <button>التسجيل</button>
-</div>;

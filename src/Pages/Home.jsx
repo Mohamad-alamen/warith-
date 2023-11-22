@@ -90,7 +90,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-[60vh] lg:h-screen w-full  flex justify-center items-center">
+      <div className="h-[60vh] lg:h-screen w-full  flex justify-center items-center mt-5rem">
         <div className="w-[80%] h-[40%] bg-white">
           <div className="h-[30%]  flex justify-center items-center">
             <p className="text-[#15313F] font-semibold text-3xl border-b-2 pb-3 border-[#FFA300]">
@@ -121,7 +121,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-[65vh] lg:h-screen lg:hidden">
+      <div className="h-[65vh] lg:h-screen lg:hidden mt-5rem">
         <div className="w-full h-[12%] flex flex-col gap-10">
           <div className="h-[60%] flex items-center justify-center">
             <p className="text-[#15313F] text-3xl font-semibold">
@@ -185,7 +185,7 @@ function Home() {
               </p>
             </div>
             <div className="h-[40%] w-[87%] flex justify-end px-2">
-              <ul className="hidden lg:flex flex-row-reverse gap-12">
+              <ul className="hidden xl:flex flex-row-reverse gap-12">
                 <li
                   className={`hover:cursor-pointer text-lg ${
                     selectedCategory === "" ? "font-bold" : "text-[#8C8C8C]"
@@ -320,14 +320,14 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen mt-0 lg:mt-[20rem] flex flex-col lg:flex-row overflow-hidden relative">
+      <div className="h-screen mt-5rem lg:mt-[25rem] flex flex-col lg:flex-row overflow-hidden relative">
         <div
           style={{
             backgroundImage: `url(${yellowArrow})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
           }}
-          className="w-[8rem] h-20 lg:h-[12rem] lg:w-[14rem] absolute top-[5rem] right-[9rem] lg:left-[18rem] lg:top-[8rem]"
+          className="w-[8rem] h-20 lg:h-[12rem] lg:w-[14rem] hidden  absolute top-[5rem] right-[9rem] lg:left-[18rem] lg:top-[8rem]"
         ></div>
         <div
           style={{
@@ -335,7 +335,7 @@ function Home() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
           }}
-          className=" absolute h-[9rem] w-[5rem]  lg:h-[12rem] lg:w-[12rem] top-[18rem] left-[1rem] lg:top-[28rem] lg:left-[18rem]"
+          className=" absolute h-[9rem] w-[5rem]  hidden  lg:h-[12rem] lg:w-[12rem] top-[18rem] left-[1rem] lg:top-[28rem] lg:left-[18rem]"
         ></div>
         <div className="h-full w-[100%] flex flex-col justify-around  lg:w-[50%] ">
           <div className="h-[30%] flex  flex-col items-end justify-around  pr-2">
@@ -577,14 +577,14 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen lg:mt-60 flex items-center justify-center">
+      <div className="h-screen lg:mt-[25rem] flex items-center justify-center">
         <div className="w-full h-80">
           <div className="h-[30%] w-full flex justify-center items-center">
             <p className="text-[#15313F] text-xl md:text-3xl font-semibold">
               Warith Elevate تعرف على مدربين
             </p>
           </div>
-          <div className="h-[100%] w-[100%] bg-white flex justify-end lg:justify-around items-center">
+          <div className="h-[100%] w-[100%] bg-white flex justify-center lg:justify-around items-center">
             <div className="hidden  lg:flex">
               <InstructorCard />
             </div>
@@ -597,7 +597,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen flex flex-col gap-4 mt-20">
+      <div className="h-screen flex flex-col gap-4 mt-[12rem]">
         <div className="h-10 flex justify-center items-center">
           <p className="font-semibold text-[#15313F] text-3xl">
             Warith Elevate اخبار
