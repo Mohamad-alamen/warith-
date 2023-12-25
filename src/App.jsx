@@ -7,11 +7,14 @@ import Workshop from './Pages/Workshop.jsx'
 import News from './Pages/News.jsx'
 import ContactUs from './Pages/ContactUs.jsx'
 import Subpage from './Pages/Subpage.jsx';
+import Header from './Component/Header.jsx';
+import Footer from './Component/Footer.jsx';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/AboutUs" element={<AboutUs/>}/>
@@ -21,6 +24,7 @@ function App() {
           <Route path="/ContactUs" element={<ContactUs/>}/>
           <Route path="/Subpage" element={<Subpage/>}/>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

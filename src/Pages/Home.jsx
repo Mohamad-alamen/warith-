@@ -1,6 +1,5 @@
 import Header from "../Component/Header.jsx";
 import CourseCard from "../Component/CoursesCard.jsx";
-import Footer from "../Component/Footer.jsx";
 import yellowLine from "../../public/Icons/yellowLine.svg";
 import yellowArrow from "../../public/Icons/yellowArrow.svg";
 import WorkshopCard from "../Component/WorkshopCard.jsx";
@@ -21,6 +20,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import Hero from "../Component/Hero.jsx";
 
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -32,65 +32,9 @@ function Home() {
   };
 
   return (
-    <div className="overflow-hidden">
-      <div className="h-screen relative">
-        <Header />
-        <div className="h-[70vh] w-full relative">
-          <div className="h-[90vh] w-full bg-[#15313F] opacity-40 absolute z-10 pointer-events-none"></div>
-          <Swiper
-            className="h-[90vh] relative my-swiper"
-            modules={[Navigation]}
-            spaceBetween={10}
-            slidesPerView={1}
-            navigation
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-          >
-            <SwiperSlide>
-              <img
-                className="h-full w-full object-cover"
-                src="https://static.stacker.com/s3fs-public/styles/sar_screen_maximum_large/s3/WomenCollegeEHYR_2.png"
-                alt="Slide 1"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className="h-full w-full object-cover "
-                src="https://www.parcelpending.com/wp-content/uploads/2021/03/How-to-Attract-College-Students-Online-900x600.jpg"
-                alt="Slide 2"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className="h-full w-full object-cover"
-                src="https://www.brainbalancecenters.com/hubfs/Help-for-Struggling-College-Students.jpeg"
-                alt="Slide 3"
-              />
-            </SwiperSlide>
-          </Swiper>
-          <div className="lg:h-[100%] h-[60%] w-[70%] md:w-[40%]  absolute lg:top-20 lg:right-20 top-[9rem] right-10 z-20  lg:flex lg:flex-col lg:items-end  ">
-            <div className="h-[40%] flex justify-end pl-9 items-start lg:w-[65%] lg:justify-end">
-              <div className="h-[40%] w-[90%] flex justify-end items-end ">
-                <img src={Logo} alt="" className="lg:h-[6rem] h-[5rem]" />
-                <img src={Logo2} alt="" className="lg:h-[8rem] h-[6rem]" />
-              </div>
-            </div>
-            <div className="h-[60%] flex flex-col items-end gap-4 justify-center lg:items-end lg:gap-0 lg:justify-around">
-              <p className="lg:text-3xl text-xl  text-white font-thin text-right border-b-2 border-[#FFA300] pb-4">
-                مركز وارث للريادة والابتكار والتطوير
-              </p>
-              <p className="lg:text-5xl text-3xl text-right font-bold text-white">
-                اطلق <span className="text-[#FFA300]">قدراتك</span> <br />{" "}
-                <span className="text-[#FFA300]">وابتكر</span> مستقبلك
-              </p>
-              <button className="bg-white text-xl px-6 py-4 rounded font-bold">
-                انضم الان
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="h-[60vh] lg:h-screen w-full  flex justify-center items-center mt-5rem">
+    <div className=" w-full h-full max-w-screen-2xl m-auto">
+    <Hero/>
+      <div className="full w-full  flex justify-center items-center ">
         <div className="w-[80%] h-[40%] bg-white">
           <div className="h-[30%]  flex justify-center items-center">
             <p className="text-[#15313F] font-semibold text-3xl border-b-2 pb-3 border-[#FFA300]">
@@ -121,7 +65,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-[65vh] lg:h-screen lg:hidden mt-5rem">
+      <div className="full lg:h-screen lg:hidden ">
         <div className="w-full h-[12%] flex flex-col gap-10">
           <div className="h-[60%] flex items-center justify-center">
             <p className="text-[#15313F] text-3xl font-semibold">
@@ -176,7 +120,7 @@ function Home() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="h-screen flex justify-center items-center hidden lg:flex">
+      <div className="h-full flex justify-center items-center lg:flex">
         <div className="h-full w-[95%] ">
           <div className="w-full h-[12%] flex flex-col gap-10">
             <div className="h-[60%] flex items-center justify-center">
@@ -320,7 +264,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen mt-5rem lg:mt-[25rem] flex flex-col lg:flex-row overflow-hidden relative">
+      <div className="h-full flex flex-col lg:flex-row overflow-hidden relative">
         <div
           style={{
             backgroundImage: `url(${yellowArrow})`,
@@ -395,7 +339,7 @@ function Home() {
           />
         </div>
       </div>
-      <div className="h-screen lg:hidden">
+      <div className="h-full lg:hidden">
         <div className="h-[20%] flex items-center justify-center">
           <p className="text-[#15313F] text-3xl font-semibold">
             الدورات التدريبية
@@ -447,7 +391,7 @@ function Home() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="h-screen hidden lg:flex justify-center items-center">
+      <div className="h-full hidden lg:flex justify-center items-center">
         <div className="h-full w-[95%] flex flex-col gap-[9rem] ">
           <div className="w-full h-[12%] flex flex-col gap-10">
             <div className="h-[20%] flex items-center justify-center">
@@ -577,33 +521,14 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen lg:mt-[25rem] flex items-center justify-center">
-        <div className="w-full h-80">
-          <div className="h-[30%] w-full flex justify-center items-center">
-            <p className="text-[#15313F] text-xl md:text-3xl font-semibold">
-              Warith Elevate تعرف على مدربين
-            </p>
-          </div>
-          <div className="h-[100%] w-[100%] bg-white flex justify-center lg:justify-around items-center">
-            <div className="hidden  lg:flex">
-              <InstructorCard />
-            </div>
-            <div className="hidden lg:flex">
-              <InstructorCard />
-            </div>
-            <div>
-              <InstructorCard />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="h-screen flex flex-col gap-4 mt-[12rem]">
-        <div className="h-10 flex justify-center items-center">
+    
+      <div className="h-full flex flex-col ">
+        <div className="flex justify-center items-center">
           <p className="font-semibold text-[#15313F] text-3xl">
             Warith Elevate اخبار
           </p>
         </div>
-        <div className="h-[90%] flex">
+        <div className=" flex">
           <div className="h-full w-[100%] flex flex-col justify-evenly lg:w-[50%] pl-10">
             <NewsCard
               imageSrc="https://a.storyblok.com/f/159374/1280x853/571a1bca9b/a-group-of-people-having-a-meeting-in-the-office.jpg"
@@ -652,12 +577,12 @@ function Home() {
           </div>
         </div>
         <div className="h-10  mt-12 lg:mt-10 flex justify-center items-center">
-          <button className="border px-4 py-4 text-lg font-semibold  border-2 border-black rounded">
+          <button className=" px-4 py-4 text-lg font-semibold  border-2 border-black rounded">
             عرض جميع الاخبار
           </button>
         </div>
       </div>
-      <div className="h-screen mt-90 flex  items-center ">
+      <div className="h-full flex  items-center ">
         <div
           className="flex flex-col gap-14"
           style={{
@@ -691,7 +616,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
