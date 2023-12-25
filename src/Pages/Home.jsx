@@ -521,7 +521,26 @@ function Home() {
           </div>
         </div>
       </div>
-    
+      <div className="h-full flex items-center justify-center">
+        <div className="w-full h-80">
+          <div className="h-[30%] w-full flex justify-center items-center">
+            <p className="text-[#15313F] text-xl md:text-3xl font-semibold">
+              Warith Elevate تعرف على مدربين
+            </p>
+          </div>
+          <div className="h-[100%] w-[100%] bg-white flex justify-center lg:justify-around items-center">
+            <div className="hidden  lg:flex">
+              <InstructorCard />
+            </div>
+            <div className="hidden lg:flex">
+              <InstructorCard />
+            </div>
+            <div>
+              <InstructorCard />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="h-full flex flex-col ">
         <div className="flex justify-center items-center">
           <p className="font-semibold text-[#15313F] text-3xl">

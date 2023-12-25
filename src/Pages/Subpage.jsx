@@ -17,6 +17,7 @@ function Subpage(){
                   src="https://static.wikia.nocookie.net/beyond-universe/images/9/9e/UNVE-15-DU.png/revision/latest?cb=20231028070333"
                   alt=""
                 />
+                {/* /test */}
                 <div className="pr-1">
                   <p className="text-2xl">اسم الدورة: كورس تصميم الهوية البصرية</p>
                   <p className="text-2xl">مدة الدورة: 15 يوم</p>
